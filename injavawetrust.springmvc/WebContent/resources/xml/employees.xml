@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<employees>
+    <employee>
+        <ssn>1000</ssn>
+        <firstname>Levent</firstname>
+        <lastname>Erguder</lastname>
+        <role>Software Engineer</role>
+        <salary>1000</salary>
+    </employee>
+    <employee>
+        <ssn>1001</ssn>
+        <firstname>Recep</firstname>
+        <lastname>Bostanci</lastname>
+        <role>Software Engineer</role>
+        <salary>2000</salary>
+    </employee>
+    <employee>
+        <ssn>1002</ssn>
+        <firstname>Burak</firstname>
+        <lastname>Okumus</lastname>
+        <role>Manager</role>
+        <salary>15000</salary>
+    </employee>
+    <employee>
+        <ssn>1003</ssn>
+        <firstname>Ozkan</firstname>
+        <lastname>Ozbas</lastname>
+        <role>Manager</role>
+        <salary>15000</salary>
+    </employee>
+</employees>

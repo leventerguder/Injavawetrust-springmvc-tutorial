@@ -1,0 +1,56 @@
+*{
+	 padding : 0;
+	 margin : 0;
+	 border : 0;
+}
+body{
+	 background-color : gray
+}
+.blended_grid{
+	 display : block;
+	 width : 900px;
+	 overflow : auto;
+	 margin : 30px auto 0 auto;
+}
+.pageHeader{
+	 background-color : rgba(0,96,217,0.67);
+	 float : left;
+	 clear : none;
+	 height : 200px;
+	 width : 900px;
+}
+.pageLeftMenu{
+	 background-color : aliceblue;
+	 float : left;
+	 clear : none;
+	 height : 400px;
+	 width : 200px;
+}
+.pageContent{
+	 background-color : white;
+	 float : left;
+	 clear : none;
+	 height : 400px;
+	 width : 700px;
+}
+.pageFooter{
+	 background-color : beige;
+	 float : left;
+	 clear : none;
+	 height : 100px;
+	 width : 900px;
+}
+
+.pageFooter p {	
+    margin-left: 200px;
+    margin-top: 10px;	
+}
+
+.pageHeader a{
+	color: white;
+}
+
+.pageLeftMenu a{
+	color: red;
+	margin-left: 20px;
+}

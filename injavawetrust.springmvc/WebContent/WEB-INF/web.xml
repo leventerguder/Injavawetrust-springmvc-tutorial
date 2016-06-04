@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>injavawetrust.springmvc</display-name>
+
+	<!-- Istekleri karsilayabilmek icin oncelikle FrontController olarak calisan 
+		DispatcherServlet'in deklarasyonunu ve mapping islemini yapmamiz gereklidir. -->
+
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+
+	    <init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>					
+			<!-- 		
+	 		 /WEB-INF/01.appContext.xml
+			 /WEB-INF/02.00.appContext.xml
+			 /WEB-INF/03.multiActionController.xml
+			 /WEB-INF/04.propertiesMethodNameResolver.xml	
+			 /WEB-INF/05.parameterMethodNameResolver.xml	
+			 /WEB-INF/06.requestMapping.xml
+			 /WEB-INF/07.more.requestMapping.xml
+			 /WEB-INF/08.localization.i18n.xml						
+			 /WEB-INF/09.validation.xml
+		 	 /WEB-INF/10.validation.jsr349.xml
+		 	 /WEB-INF/11.audit.xml
+		 	 /WEB-INF/12.exception.handling.xml	
+			 /WEB-INF/13.xmlViewResolver.xml
+			 /WEB-INF/14.resourceBundleViewResolver.xml
+			 /WEB-INF/15.internalResourceViewResolver.xml
+			 /WEB-INF/16.urlBasedViewResolver.xml	
+			 /WEB-INF/17.xsltViewResolver.xml
+			 /WEB-INF/18.pdfAndExcel.xml
+			 /WEB-INF/19.json.xml
+			 /WEB-INF/20.jaxb.xml
+			 /WEB-INF/21.jaxb.xml
+			 /WEB-INF/22.apache.tiles.xml
+			-->
+			 /WEB-INF/23.jpa.xml			   						  					
+			</param-value> 			
+		 </init-param>	
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+		<url-pattern>/myproject/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

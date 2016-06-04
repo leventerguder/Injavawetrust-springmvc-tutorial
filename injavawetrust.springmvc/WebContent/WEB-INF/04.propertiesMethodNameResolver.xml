@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- ControllerClassNameHandlerMapping  -->
+<!-- 
+	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+
+	<bean class="_04.propertiesMethodNameResolver.controller.OrderController">
+	  <property name="methodNameResolver">
+	      <bean class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+	         <property name="mappings">
+		         <props>
+					 <prop key="/order/customerAdd">add</prop>
+					 <prop key="/order/customerRemove">remove</prop>
+					 <prop key="/order/customerList">list</prop>
+				 </props>
+			</property>
+	      </bean>
+	  </property>
+	</bean>
+ -->	
+	
+	<!-- BeanNameUrlHandlerMapping  -->
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
+
+	<bean name="/order/*" class="_04.propertiesMethodNameResolver.controller.OrderController">
+	  <property name="methodNameResolver">
+	      <bean class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+	         <property name="mappings">
+		         <props>
+					 <prop key="/order/customerAdd">add</prop>
+					 <prop key="/order/customerRemove">remove</prop>
+					 <prop key="/order/customerList">list</prop>
+				 </props>
+			</property>
+	      </bean>
+	  </property>
+	</bean>
+	
+	
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+</beans>
