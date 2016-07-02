@@ -40,8 +40,9 @@
 			 /WEB-INF/20.jaxb.xml
 			 /WEB-INF/21.jaxb.xml
 			 /WEB-INF/22.apache.tiles.xml
+			 /WEB-INF/23.jpa.xml	
 			-->
-			 /WEB-INF/23.jpa.xml			   						  					
+			 /WEB-INF/24.hibernate.xml			   						  					
 			</param-value> 			
 		 </init-param>	
 		<load-on-startup>1</load-on-startup>
