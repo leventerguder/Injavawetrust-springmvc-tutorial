@@ -14,9 +14,16 @@ public class HelloController {
 	@Autowired
 	private HelloService helloService;
 
-	public void setHelloService(HelloService helloService) {
-		this.helloService = helloService;
-	}
+	// we are using context:component-scan.
+	// we don't need setter method for @Autowired.
+
+	// setter injection'ini kendimiz yapmak yerine , context:component-scan
+	// tag'ini kullaniyoruz.
+	// @Autowired icin setter metoduna ihtiyacimiz yoktur.
+
+	// public void setHelloService(HelloService helloService) {
+	// this.helloService = helloService;
+	// }
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String sayHelloSpringMVC(ModelMap model) {
