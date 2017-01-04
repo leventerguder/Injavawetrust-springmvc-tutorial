@@ -9,6 +9,7 @@ import org.springframework.web.servlet.mvc.AbstractController;
 public class Page2Controller extends AbstractController {
 
 	@Override
+	// http://localhost:8080/injavawetrust.springmvc/page2
 	protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 

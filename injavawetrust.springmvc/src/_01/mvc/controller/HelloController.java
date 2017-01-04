@@ -26,6 +26,7 @@ public class HelloController {
 	// }
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	// http://localhost:8080/injavawetrust.springmvc/hello
 	public String sayHelloSpringMVC(ModelMap model) {
 		String message = helloService.getMessage();
 		model.addAttribute("message", message);

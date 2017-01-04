@@ -6,10 +6,10 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!--######## BeanNameUrlHandlerMapping begin ######## -->
-	<!-- 
+	
 	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 	<bean name="/order/*" class="_03.multiActionController.controller.OrderController"/>
-	 -->
+	 
 	<!--######## BeanNameUrlHandlerMapping end ######## --> 
 	
 	<!--######## SimpleUrlHandlerMapping begin ######## -->
@@ -45,10 +45,13 @@
 	
 	<!--######## ControllerClassNameHandlerMapping start ######## -->
 
+	<!-- 
 	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping" />
+	 -->
 		
 	<!--######## ControllerClassNameHandlerMapping end ######## -->
 	
+	<!-- 
 	<bean class="_03.multiActionController.controller.OrderController">
         <property name="methodNameResolver">
 		    <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
@@ -57,6 +60,7 @@
 			</bean>
         </property>
 	</bean>
+	-->
 		
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
