@@ -18,6 +18,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
 			 /WEB-INF/01.appContext.xml
+			 /WEB-INF/06.requestMapping.xml
 			<!--
 			 /WEB-INF/02.00.appContext.xml
 			 /WEB-INF/03.multiActionController.xml
