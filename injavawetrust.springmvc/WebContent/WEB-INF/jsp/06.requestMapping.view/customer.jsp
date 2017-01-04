@@ -7,6 +7,7 @@
 <title>customer.jsp</title>
 </head>
 <body>
-	<h2>${message}</h2>
+	<h2>${message1}</h2>
+	<h2>${message2}</h2>
 </body>
 </html>
