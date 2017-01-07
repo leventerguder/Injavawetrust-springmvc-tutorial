@@ -1,4 +1,4 @@
-package _06.requestMapping.controller;
+package _07.uri.arguments.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -24,7 +24,7 @@ public class CustomerController {
 	public String getCustomerById(@PathVariable("customerId") String customerId, Model model) {
 		model.addAttribute("message1", "CustomerController#getCustomerById is called.");
 		model.addAttribute("message2", "Customer Id : " + customerId);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 	@RequestMapping("/pathVariable2/{day}/{month}/{year}")
@@ -34,7 +34,7 @@ public class CustomerController {
 		LocalDate date = LocalDate.of(year, month, day);
 		model.addAttribute("message1", "CustomerController#getCustomersByBirthDate is called.");
 		model.addAttribute("message2", "Customer BirthDate : " + date);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 	@RequestMapping("/reqeustParam")
@@ -42,7 +42,7 @@ public class CustomerController {
 	public String getCustomerByName(@RequestParam("name") String customerName, Model model) {
 		model.addAttribute("message1", "CustomerController#getCustomerByName is called.");
 		model.addAttribute("message2", "Customer Name : " + customerName);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 	@RequestMapping("/reqeustParam2")
@@ -51,7 +51,7 @@ public class CustomerController {
 			@RequestParam("surname") String customerSurname, Model model) {
 		model.addAttribute("message1", "CustomerController#getCustomerByNameAndSurname is called.");
 		model.addAttribute("message2", "Customer Information: " + customerName + " " + customerSurname);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 	@RequestMapping("/matrixParam/{filter}")
@@ -59,7 +59,7 @@ public class CustomerController {
 	public String getCustomerByFilter1(@MatrixVariable(pathVar = "filter") String phoneNumber, Model model) {
 		model.addAttribute("message1", "CustomerController#getCustomerByFilter1 is called.");
 		model.addAttribute("message2", "Customer PhoneNumber: " + phoneNumber);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 	// http://localhost:8080/injavawetrust.springmvc/customer/matrixParam2/gender=male;city=istanbul
@@ -69,7 +69,7 @@ public class CustomerController {
 			@MatrixVariable(pathVar = "filter") List<String> city, Model model) {
 		model.addAttribute("message1", "CustomerController#getCustomerByFilter2 is called.");
 		model.addAttribute("message2", "Customer Information: " + gender + " " + city);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 	@RequestMapping("/matrixParam3/{filter}")
@@ -78,7 +78,7 @@ public class CustomerController {
 			Model model) {
 		model.addAttribute("message1", "CustomerController#getCustomerByFilter3 is called.");
 		model.addAttribute("message2", "Customer Information: " + matrixVariables);
-		return "06.requestMapping.view/customer";
+		return "07.uri.arguments.view/customer";
 	}
 
 }

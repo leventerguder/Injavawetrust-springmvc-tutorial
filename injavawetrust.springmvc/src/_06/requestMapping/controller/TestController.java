@@ -9,16 +9,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/test")
 public class TestController {
 
-	@RequestMapping(method = {RequestMethod.GET})
+	@RequestMapping(method = { RequestMethod.GET })
+	// http://localhost:8080/injavawetrust.springmvc/test
 	public String testMethod(Model model) {
 		model.addAttribute("message", "testMethod...");
 		return "06.requestMapping.view/testPage";
 	}
-	
-	@RequestMapping(method = {RequestMethod.GET} , value="/test2")
+
+	@RequestMapping(method = { RequestMethod.GET }, value = "/test2")
+	// http://localhost:8080/injavawetrust.springmvc/test/test2
 	public String testMethodWithValue(Model model) {
 		model.addAttribute("message", "testMethodWithValue...");
 		return "06.requestMapping.view/testPage";
 	}
-	
+
 }
