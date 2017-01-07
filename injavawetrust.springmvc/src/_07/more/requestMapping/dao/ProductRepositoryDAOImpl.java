@@ -78,10 +78,12 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 
 	}
 
+	@Override
 	public List<Product> getAllProducts() {
 		return listOfProducts;
 	}
 
+	@Override
 	public Product getProductById(String productId) {
 		Product productById = null;
 
@@ -99,6 +101,7 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		return productById;
 	}
 
+	@Override
 	public List<Product> getProductsByCategory(String category) {
 		List<Product> productsByCategory = new ArrayList<Product>();
 
@@ -111,6 +114,7 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		return productsByCategory;
 	}
 
+	@Override
 	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
 		Set<Product> productsByBrand = new HashSet<Product>();
 		Set<Product> productsByCategory = new HashSet<Product>();
@@ -151,7 +155,7 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		return productsByCategory;
 	}
 	
-	
+	@Override
 	public void addProduct(Product product) {
 		   listOfProducts.add(product);
 	}

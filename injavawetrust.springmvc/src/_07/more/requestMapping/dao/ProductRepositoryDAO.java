@@ -8,13 +8,13 @@ import _07.more.requestMapping.domain.Product;
 
 public interface ProductRepositoryDAO {
 
-	List<Product> getAllProducts();
+	public List<Product> getAllProducts();
 
-	Product getProductById(String productID);
+	public Product getProductById(String productID);
 
-	List<Product> getProductsByCategory(String category);
+	public List<Product> getProductsByCategory(String category);
 
-	Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
+	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
 
-	void addProduct(Product product);
+	public void addProduct(Product product);
 }
