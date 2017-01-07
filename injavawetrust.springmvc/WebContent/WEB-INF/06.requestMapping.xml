@@ -11,6 +11,9 @@
         http://www.springframework.org/schema/mvc 
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         ">
+	
+	<!-- enabled @MatrixVariable , default false! -->
+	<mvc:annotation-driven	enable-matrix-variables="true"/>
 
 	<!--Auto-scanning ozelligini aktif ettigimizde bean tanimlamasini xml dosyamizada 
 		yapmamiza gerek kalmaz. @Controller  @Service gibi annotation icin yeterli olacaktir. -->
@@ -21,7 +24,5 @@
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
-	
-	<mvc:annotation-driven	enable-matrix-variables="true"/>
 
 </beans>
