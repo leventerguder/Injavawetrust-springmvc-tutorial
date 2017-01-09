@@ -1,4 +1,4 @@
-package _07.more.requestMapping.service;
+package _08.webstore.service;
 
 import java.util.List;
 import java.util.Map;
@@ -7,8 +7,8 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import _07.more.requestMapping.dao.ProductRepositoryDAO;
-import _07.more.requestMapping.domain.Product;
+import _08.webstore.dao.ProductRepositoryDAO;
+import _08.webstore.domain.Product;
 
 @Service
 public class ProductServiceImpl implements ProductService {

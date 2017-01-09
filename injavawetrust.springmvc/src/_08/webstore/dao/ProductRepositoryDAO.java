@@ -1,12 +1,12 @@
-package _07.more.requestMapping.service;
+package _08.webstore.dao;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import _07.more.requestMapping.domain.Product;
+import _08.webstore.domain.Product;
 
-public interface ProductService {
+public interface ProductRepositoryDAO {
 
 	public List<Product> getAllProducts();
 

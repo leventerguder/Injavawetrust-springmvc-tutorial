@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<c:set var="productUrl" value="${pageContext.request.contextPath}/products"/>
+<c:set var="productUrlAll" value="${pageContext.request.contextPath}/products/all"/>
+<c:set var="productUrlCategory" value="${pageContext.request.contextPath}/products/category"/>
 <c:set var="matrixUrl" value="${pageContext.request.contextPath}/products/filter"/>
 
 <html>
@@ -109,16 +110,16 @@
 		<div class="col-md-6">
 			<ul class="nav nav-tabs">
 				<li class="">
-					<a href="${productUrl}/all">All Products</a>
+					<a href="${productUrlAll}">All Products</a>
 				</li>
 				<li>
-					<a href="${productUrl}/laptop">Laptops</a>
+					<a href="${productUrlCategory}/laptop">Laptops</a>
 				</li>
 				<li class="">
-					<a href="${productUrl}/tablet">Tablets</a>
+					<a href="${productUrlCategory}/tablet">Tablets</a>
 				</li>
 				<li class="">
-					<a href="${productUrl}/smart phone">Smart Phone</a>
+					<a href="${productUrlCategory}/smartPhone">Smart Phones</a>
 				</li>
 			</ul>
 		</div>

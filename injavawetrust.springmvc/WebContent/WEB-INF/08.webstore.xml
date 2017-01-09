@@ -20,7 +20,7 @@
 	
 	<!--Auto-scanning ozelligini aktif ettigimizde bean tanimlamasini xml dosyamizada 
 		yapmamiza gerek kalmaz. @Controller  @Service gibi annotation icin yeterli olacaktir. -->
-	<context:component-scan base-package="_07.more.requestMapping" />
+	<context:component-scan base-package="_08.webstore" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

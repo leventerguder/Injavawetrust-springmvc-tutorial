@@ -1,4 +1,4 @@
-package _07.more.requestMapping.domain;
+package _08.webstore.domain;
 
 public class Product {
 

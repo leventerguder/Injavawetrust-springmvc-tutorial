@@ -1,4 +1,4 @@
-package _07.more.requestMapping.dao;
+package _08.webstore.dao;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -8,7 +8,7 @@ import java.util.Set;
 
 import org.springframework.stereotype.Repository;
 
-import _07.more.requestMapping.domain.Product;
+import _08.webstore.domain.Product;
 
 @Repository
 public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
@@ -18,7 +18,7 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 	public ProductRepositoryDAOImpl() {
 		Product iphone = new Product("P1001", "iPhone 5s", 549.99);
 		iphone.setDescription("Apple iPhone 5s smartphone with 4.00-inch 640x1136 display and 8-megapixel rear camera");
-		iphone.setCategory("Smart Phone");
+		iphone.setCategory("SmartPhone");
 		iphone.setManufacturer("Apple");
 		iphone.setUnitsInStock(1000);
 
