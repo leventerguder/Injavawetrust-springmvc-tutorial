@@ -14,7 +14,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import _08.webstore.service.ProductService;
 
-
 @Controller
 @RequestMapping("/products")
 public class ProductController {
@@ -25,7 +24,7 @@ public class ProductController {
 	@RequestMapping
 	public String list(Model model) {
 		model.addAttribute("products", productService.getAllProducts());
-                return "08.webstore.view/productList";
+		return "08.webstore.view/productList";
 	}
 
 	@RequestMapping("/all")
@@ -33,20 +32,20 @@ public class ProductController {
 		ModelAndView modelAndView = new ModelAndView();
 
 		modelAndView.addObject("products", productService.getAllProducts());
-                modelAndView.setViewName("08.webstore.view/productList");
+		modelAndView.setViewName("08.webstore.view/productList");
 		return modelAndView;
 	}
 
-	@RequestMapping("/category/{category}")
-	public String getProductsByCategory(@PathVariable("category") String productCategory, Model model) {
+	@RequestMapping("/category/{productCategory}")
+	public String getProductsByCategory(@PathVariable("productCategory") String productCategory, Model model) {
 		model.addAttribute("products", productService.getProductsByCategory(productCategory));
-                return "08.webstore.view/productList";
-	}
-	
-	@RequestMapping("/product")
-	public String getProductById(@RequestParam("id") String productId, Model model) {
-		model.addAttribute("product", productService.getProductById(productId));
 		return "08.webstore.view/productList";
+	}
+
+	@RequestMapping("/product")
+	public String getProductById(@RequestParam(required = false, name = "id") String productId, Model model) {
+		model.addAttribute("product", productService.getProductById(productId));
+		return "08.webstore.view/productDetail";
 	}
 
 	@RequestMapping("/filter/{ByCriteria}")

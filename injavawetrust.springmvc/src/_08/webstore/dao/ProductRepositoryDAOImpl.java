@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +18,7 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 	private List<Product> listOfProducts = new ArrayList<Product>();
 
 	public ProductRepositoryDAOImpl() {
+
 		Product iphone = new Product("P1001", "iPhone 5s", 549.99);
 		iphone.setDescription("Apple iPhone 5s smartphone with 4.00-inch 640x1136 display and 8-megapixel rear camera");
 		iphone.setCategory("SmartPhone");
@@ -35,8 +38,8 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		laptopDell133.setUnitsInStock(500);
 
 		Product tabletNexus = new Product("P1004", "Nexus 7", 298.99);
-		tabletNexus
-				.setDescription("Google Nexus 7 is the lightest 7 inch tablet With a quad-core Qualcomm Snapdragon S4 Pro processor");
+		tabletNexus.setDescription(
+				"Google Nexus 7 is the lightest 7 inch tablet With a quad-core Qualcomm Snapdragon S4 Pro processor");
 		tabletNexus.setCategory("Tablet");
 		tabletNexus.setManufacturer("Google");
 		tabletNexus.setUnitsInStock(400);
@@ -85,33 +88,37 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 
 	@Override
 	public Product getProductById(String productId) {
-		Product productById = null;
+		// Product productById = null;
+		//
+		// for (Product product : listOfProducts) {
+		// if (product != null && product.getProductId() != null &&
+		// product.getProductId().equals(productId)) {
+		// productById = product;
+		// break;
+		// }
+		// }
 
-		for (Product product : listOfProducts) {
-			if (product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
-				productById = product;
-				break;
-			}
-		}
+		Predicate<Product> predicate = (Product p) -> p.getProductId().equals(productId);
+		Product foundProduct = listOfProducts.stream().filter(predicate).findAny().orElse(null);
 
-		if (productById == null) {
-			throw new IllegalArgumentException("No products found with the product id: " + productId);
-		}
-
-		return productById;
+		return foundProduct;
 	}
 
 	@Override
 	public List<Product> getProductsByCategory(String category) {
-		List<Product> productsByCategory = new ArrayList<Product>();
+		// List<Product> productsByCategory = new ArrayList<Product>();
+		//
+		// for (Product product : listOfProducts) {
+		// if (category.equalsIgnoreCase(product.getCategory())) {
+		// productsByCategory.add(product);
+		// }
+		// }
+		//
+		// return productsByCategory;
 
-		for (Product product : listOfProducts) {
-			if (category.equalsIgnoreCase(product.getCategory())) {
-				productsByCategory.add(product);
-			}
-		}
-
-		return productsByCategory;
+		Predicate<Product> predicate = (Product product) -> product.getCategory().equalsIgnoreCase(category);
+		List<Product> filtered = listOfProducts.stream().filter(predicate).collect(Collectors.toList());
+		return filtered;
 	}
 
 	@Override
@@ -138,25 +145,25 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		}
 
 		if (productsByBrand.size() > 0 && productsByCategory.size() > 0) {
-			//kesisimini al.
+			// kesisimini al.
 			productsByCategory.retainAll(productsByBrand);
 		} else {
-			
+
 			HashSet<Product> search = new HashSet<Product>();
 			if (productsByBrand.size() > 0) {
 				search.addAll(productsByBrand);
 			} else {
 				search.addAll(productsByCategory);
 			}
-			
+
 			return search;
 		}
 
 		return productsByCategory;
 	}
-	
+
 	@Override
 	public void addProduct(Product product) {
-		   listOfProducts.add(product);
+		listOfProducts.add(product);
 	}
 }
