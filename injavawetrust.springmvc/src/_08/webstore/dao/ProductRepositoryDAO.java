@@ -1,9 +1,6 @@
 package _08.webstore.dao;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import _08.webstore.domain.Product;
 
 public interface ProductRepositoryDAO {
@@ -14,7 +11,5 @@ public interface ProductRepositoryDAO {
 
 	public List<Product> getProductsByCategory(String category);
 
-	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
-
-	public void addProduct(Product product);
+	public List<Product> getProductsByBrands(List<String> brands);
 }

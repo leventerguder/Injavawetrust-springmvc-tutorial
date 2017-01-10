@@ -2,7 +2,7 @@
 
 <c:set var="productUrlAll" value="${pageContext.request.contextPath}/products/all"/>
 <c:set var="productUrlCategory" value="${pageContext.request.contextPath}/products/category"/>
-<c:set var="matrixUrl" value="${pageContext.request.contextPath}/products/filter"/>
+<c:set var="matrixUrl" value="${pageContext.request.contextPath}/products/brand"/>
 
 <html>
 <head>
@@ -10,7 +10,24 @@
  
 <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/resources/css/sidebar.css" />" /> 
 <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/resources/css/bootstrap.min.css" />" />
-<script src="<c:url value="/resources/js/jquery-2.2.0.min.js" />"></script>
+<script src="<c:url value="/resources/js/jquery.min.js" />"></script>
+<script>
+function prepareMatrix(){
+	
+	var selectedBrands="";
+	$('input:checkbox[name=brand]').each(function() 
+		{    
+			if($(this).is(':checked'))
+				selectedBrands=selectedBrands+$(this).val()+",";
+		});
+	
+
+	var url= '${matrixUrl}/brands='+selectedBrands;
+		
+	$("#search").attr("href", url);
+
+}
+</script>
 	
 <title>Products</title>
 </head>
@@ -49,60 +66,14 @@
                     	<input type="checkbox" name="brand" value="samsung"><span>Samsung</span> 
                     </label> 	
                 </li>
-                
-                <li class="sidebar-brand">                    
-                        Category                                  
-                </li>
-                <li>
-                	<label class="label-align">
-                    	<input type="checkbox" name="category" value="laptop"><span>Laptop</span>
-                    </label>
-                </li>
-                <li>
-                	<label class="label-align">
-                    	<input type="checkbox" name="category" value="tablet"><span>Tablet</span>
-                    </label>
-                </li>
-                <li>
-                	<label class="label-align">
-                    	<input type="checkbox" name="category" value="smart phone"><span>Smart Phone</span>
-                    </label>
-                </li>
-                
-                
-				<a style="margin-left:20px" onclick="prepareMatrix()"  name="search" id="search"						
-						class="btn btn-success" /></span> Search
+                          
+                                               	
+				<a style="margin-left:40px" onclick="prepareMatrix()"  id="search" class="btn btn-success"> <span>Search </span> 
 				</a>
                 
             </ul>
         </div>
-	
-	<script>
-	function prepareMatrix(){
-		var selectedBrands="";
-		$('input:checkbox[name=brand]').each(function() 
-			{    
-				if($(this).is(':checked'))
-					selectedBrands=selectedBrands+$(this).val()+",";
-			});
 		
-		
-		
-		var selectedCategories="";
-		$('input:checkbox[name=category]').each(function() 
-			{    
-				if($(this).is(':checked'))
-					selectedCategories=selectedCategories+$(this).val()+",";
-			});
-		
-	
-		var url= '${matrixUrl}/brand='+selectedBrands+";category="+selectedCategories;
-			
-		$("#search").attr("href", url);
-
-	}
-	</script>
-	
 	<div id="page-content-wrapper">
 	<section class="container">
 	

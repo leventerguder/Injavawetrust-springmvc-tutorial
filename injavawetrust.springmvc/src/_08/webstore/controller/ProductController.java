@@ -1,8 +1,6 @@
 package _08.webstore.controller;
 
 import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +26,7 @@ public class ProductController {
 	}
 
 	@RequestMapping("/all")
-	public ModelAndView allProducts() {
+	public ModelAndView listAllProducts() {
 		ModelAndView modelAndView = new ModelAndView();
 
 		modelAndView.addObject("products", productService.getAllProducts());
@@ -37,7 +35,7 @@ public class ProductController {
 	}
 
 	@RequestMapping("/category/{productCategory}")
-	public String getProductsByCategory(@PathVariable("productCategory") String productCategory, Model model) {
+	public String listProductsByCategory(@PathVariable("productCategory") String productCategory, Model model) {
 		model.addAttribute("products", productService.getProductsByCategory(productCategory));
 		return "08.webstore.view/productList";
 	}
@@ -48,10 +46,9 @@ public class ProductController {
 		return "08.webstore.view/productDetail";
 	}
 
-	@RequestMapping("/filter/{ByCriteria}")
-	public String getProductsByFilter(@MatrixVariable(pathVar = "ByCriteria") Map<String, List<String>> filterParams,
-			Model model) {
-		model.addAttribute("products", productService.getProductsByFilter(filterParams));
+	@RequestMapping("/brand/{brands}")
+	public String listProductsByBrands(@MatrixVariable(pathVar = "brands") List<String> brands, Model model) {
+		model.addAttribute("products", productService.getProductsByBrands(brands));
 		return "08.webstore.view/productList";
 	}
 
