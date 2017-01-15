@@ -1,10 +1,9 @@
-package _08.localization.i18n.service;
+package _10.external.textMessage.service;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-import _08.localization.i18n.domain.Product;
+import _10.external.textMessage.domain.Product;
+
 
 public interface ProductService {
 
@@ -14,7 +13,7 @@ public interface ProductService {
 
 	public List<Product> getProductsByCategory(String category);
 
-	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
-
+	public List<Product> getProductsByBrands(List<String> brands);
+	
 	public void addProduct(Product product);
 }

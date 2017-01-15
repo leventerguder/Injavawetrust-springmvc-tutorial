@@ -68,14 +68,7 @@
 					<label class="control-label col-lg-2" for="manufacturer">
 						<spring:message code="product.manufacturer"/>
 					</label>
-					<div class="col-lg-10">				
-						<!-- 								
-						<form:select id="manufacturer" path="category" type="text" class="form:input-large">
-							<form:option value="Apple">Apple</form:option>
-							<form:option value="Google">Google</form:option>
-							<form:option value="Samsung">Samsung</form:option>
-						</form:select>
-						 -->						 
+					<div class="col-lg-10">						 
 					    <form:select id="manufacturer" path="manufacturer" type="text" class="form:input-large" items="${manufacturerList}"/>						
 					</div>
 				</div>
@@ -84,15 +77,7 @@
 					<label class="control-label col-lg-2" for="category">
 						<spring:message code="product.category"/>
 					</label>
-					<div class="col-lg-10">
-						<!-- 
-						<form:select id="category" path="category" type="text" class="form:input-large">
-							<form:option value="Laptop">Laptop</form:option>
-							<form:option value="Tablet">Tablet</form:option>
-							<form:option value="Smart Phone">Smart Phone</form:option>
-						</form:select>
-						 -->
-						 
+					<div class="col-lg-10">						 
 						 <form:select id="category" path="category" type="text" class="form:input-large" items="${categoryList}"/>
 					</div>
 				</div>
@@ -111,19 +96,9 @@
 						<spring:message code="product.condition"/>
 					</label>
 					<div class="col-lg-10">
-						<!-- 
-						<form:radiobutton path="condition" value="New" />New 
-						<form:radiobutton path="condition" value="Old" />Old 
-						<form:radiobutton path="condition" value="Refurbished" />Refurbished
-						 -->
-						 <!-- 
-						 <form:radiobuttons path="condition" items="${conditionMap}"/>
-						  -->
-						 						 
-						  
 						  <c:forEach var="varCondition" items="${conditionMap}">
-    						<form:radiobutton path="condition" value="${varCondition.key}" /> 
-    						<spring:message code="product.${varCondition.value}"/>
+    						   <form:radiobutton path="condition" value="${varCondition.key}" /> 
+    						   <spring:message code="product.${varCondition.value}"/>
 						 </c:forEach> 
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-package _08.localization.i18n.domain;
+package _10.external.textMessage.domain;
 
 public class Product {
 
