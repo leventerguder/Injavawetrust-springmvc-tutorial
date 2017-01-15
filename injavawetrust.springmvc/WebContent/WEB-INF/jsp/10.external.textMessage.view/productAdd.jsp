@@ -4,9 +4,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/resources/css/bootstrap.min.css" />" />
 <title>Products</title>
 </head>
@@ -23,7 +25,18 @@
 			<fieldset>
 				<legend><spring:message code="product.add.newproduct"/>
 				
-				<span style="padding-left: 300px;"><a href="?language=en" >English</a>|<a href="?language=tr" >Turkce</a></span>
+				
+						<span style="float:right">
+							<a href="?language=en" >
+								<img src="${contextPath}/resources/images/TR.png" />						
+							</a>
+							|
+							<a href="?language=tr">
+								<img src="${contextPath}/resources/images/EN.png" />
+							</a>					
+						</span>
+				
+				
 				</legend>
     
 				<div class="form-group">
