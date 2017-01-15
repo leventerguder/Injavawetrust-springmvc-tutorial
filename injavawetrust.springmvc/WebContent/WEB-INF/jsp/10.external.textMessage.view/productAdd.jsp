@@ -27,11 +27,11 @@
 				
 				
 						<span style="float:right">
-							<a href="?language=en" >
+							<a href="?language=tr" >
 								<img src="${contextPath}/resources/images/TR.png" />						
 							</a>
 							|
-							<a href="?language=tr">
+							<a href="?language=en">
 								<img src="${contextPath}/resources/images/EN.png" />
 							</a>					
 						</span>
