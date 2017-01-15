@@ -3,9 +3,9 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/localization"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/persistence"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/messages"/>
         <property name="context-root" value="injavawetrust.springmvc"/>
         <property name="java-output-path" value="/injavawetrust.springmvc/build/classes"/>
     </wb-module>

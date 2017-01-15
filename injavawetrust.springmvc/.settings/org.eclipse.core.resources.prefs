@@ -1,3 +1,2 @@
 eclipse.preferences.version=1
-encoding//WebContent/WEB-INF/localization/springMessages_tr.properties=UTF-8
-encoding//localization/springMessages_tr.properties=UTF-8
+encoding//messages/springMessages_tr.properties=UTF-8
