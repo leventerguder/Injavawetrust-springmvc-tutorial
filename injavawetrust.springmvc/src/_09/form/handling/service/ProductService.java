@@ -13,4 +13,6 @@ public interface ProductService {
 	public List<Product> getProductsByCategory(String category);
 
 	public List<Product> getProductsByBrands(List<String> brands);
+	
+	public void addProduct(Product product);
 }

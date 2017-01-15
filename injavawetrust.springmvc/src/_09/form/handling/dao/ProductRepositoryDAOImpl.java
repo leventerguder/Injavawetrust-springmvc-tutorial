@@ -105,4 +105,9 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		return filtered;
 
 	}
+
+	@Override
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
+	}
 }
