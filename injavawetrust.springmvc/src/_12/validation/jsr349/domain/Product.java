@@ -1,4 +1,4 @@
-package _10.validation.jsr349.domain;
+package _12.validation.jsr349.domain;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
