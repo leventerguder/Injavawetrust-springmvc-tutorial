@@ -1,10 +1,8 @@
-package _09.validation.service;
+package _11.validation.service;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-import _09.validation.domain.Product;
+import _11.validation.domain.Product;
 
 
 public interface ProductService {
@@ -15,7 +13,7 @@ public interface ProductService {
 
 	public List<Product> getProductsByCategory(String category);
 
-	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams);
-
+	public List<Product> getProductsByBrands(List<String> brands);
+	
 	public void addProduct(Product product);
 }

@@ -1,15 +1,12 @@
-package _09.validation.dao;
+package _11.validation.dao;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Repository;
 
-import _09.validation.domain.Product;
-
+import _11.validation.domain.Product;
 
 @Repository
 public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
@@ -17,9 +14,10 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 	private List<Product> listOfProducts = new ArrayList<Product>();
 
 	public ProductRepositoryDAOImpl() {
+
 		Product iphone = new Product("P1001", "iPhone 5s", 549.99);
 		iphone.setDescription("Apple iPhone 5s smartphone with 4.00-inch 640x1136 display and 8-megapixel rear camera");
-		iphone.setCategory("Smart Phone");
+		iphone.setCategory("SmartPhone");
 		iphone.setManufacturer("Apple");
 		iphone.setUnitsInStock(1000);
 
@@ -36,8 +34,8 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 		laptopDell133.setUnitsInStock(500);
 
 		Product tabletNexus = new Product("P1004", "Nexus 7", 298.99);
-		tabletNexus
-				.setDescription("Google Nexus 7 is the lightest 7 inch tablet With a quad-core Qualcomm Snapdragon S4 Pro processor");
+		tabletNexus.setDescription(
+				"Google Nexus 7 is the lightest 7 inch tablet With a quad-core Qualcomm Snapdragon S4 Pro processor");
 		tabletNexus.setCategory("Tablet");
 		tabletNexus.setManufacturer("Google");
 		tabletNexus.setUnitsInStock(400);
@@ -79,81 +77,38 @@ public class ProductRepositoryDAOImpl implements ProductRepositoryDAO {
 
 	}
 
+	@Override
 	public List<Product> getAllProducts() {
 		return listOfProducts;
 	}
 
+	@Override
 	public Product getProductById(String productId) {
-		Product productById = null;
 
-		for (Product product : listOfProducts) {
-			if (product != null && product.getProductId() != null && product.getProductId().equals(productId)) {
-				productById = product;
-				break;
-			}
-		}
-
-		if (productById == null) {
-			throw new IllegalArgumentException("No products found with the product id: " + productId);
-		}
-
-		return productById;
+		Predicate<Product> predicate = (Product p) -> p.getProductId().equals(productId);
+		Product foundProduct = listOfProducts.stream().filter(predicate).findAny().orElse(null);
+		return foundProduct;
 	}
 
+	@Override
 	public List<Product> getProductsByCategory(String category) {
-		List<Product> productsByCategory = new ArrayList<Product>();
 
-		for (Product product : listOfProducts) {
-			if (category.equalsIgnoreCase(product.getCategory())) {
-				productsByCategory.add(product);
-			}
-		}
-
-		return productsByCategory;
+		Predicate<Product> predicate = (Product product) -> product.getCategory().equalsIgnoreCase(category);
+		List<Product> filtered = listOfProducts.stream().filter(predicate).collect(Collectors.toList());
+		return filtered;
 	}
 
-	public Set<Product> getProductsByFilter(Map<String, List<String>> filterParams) {
-		Set<Product> productsByBrand = new HashSet<Product>();
-		Set<Product> productsByCategory = new HashSet<Product>();
+	@Override
+	public List<Product> getProductsByBrands(List<String> brands) {
 
-		Set<String> criterias = filterParams.keySet();
+		Predicate<Product> predicate = (Product product) -> brands.contains(product.getManufacturer().toLowerCase());
+		List<Product> filtered = listOfProducts.stream().filter(predicate).collect(Collectors.toList());
+		return filtered;
 
-		if (criterias.contains("brand")) {
-			for (String brandName : filterParams.get("brand")) {
-				for (Product product : listOfProducts) {
-					if (brandName.equalsIgnoreCase(product.getManufacturer())) {
-						productsByBrand.add(product);
-					}
-				}
-			}
-		}
-
-		if (criterias.contains("category")) {
-			for (String category : filterParams.get("category")) {
-				productsByCategory.addAll(this.getProductsByCategory(category));
-			}
-		}
-
-		if (productsByBrand.size() > 0 && productsByCategory.size() > 0) {
-			//kesisimini al.
-			productsByCategory.retainAll(productsByBrand);
-		} else {
-			
-			HashSet<Product> search = new HashSet<Product>();
-			if (productsByBrand.size() > 0) {
-				search.addAll(productsByBrand);
-			} else {
-				search.addAll(productsByCategory);
-			}
-			
-			return search;
-		}
-
-		return productsByCategory;
 	}
-	
-	
+
+	@Override
 	public void addProduct(Product product) {
-		   listOfProducts.add(product);
+		listOfProducts.add(product);
 	}
 }

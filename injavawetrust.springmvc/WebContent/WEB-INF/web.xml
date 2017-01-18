@@ -17,7 +17,7 @@
 	    <init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>			 	 		
-			 /WEB-INF/10.external.textMessage.xml				 	 
+			/WEB-INF/11.validation.xml	 	 
 			<!--
 			 /WEB-INF/01.appContext.xml		
 			 /WEB-INF/02.00.appContext.xml
@@ -27,8 +27,9 @@
 			 /WEB-INF/06.requestMapping.xml
 			 /WEB-INF/07.uri.arguments.xml
 			 /WEB-INF/08.webstore.xml					 
-			 /WEB-INF/09.form.handling.xml					
-			 /WEB-INF/09.validation.xml
+			 /WEB-INF/09.form.handling.xml
+			 /WEB-INF/10.external.textMessage.xml					
+			 
 		 	 /WEB-INF/10.validation.jsr349.xml
 		 	 /WEB-INF/11.audit.xml
 		 	 /WEB-INF/12.exception.handling.xml	

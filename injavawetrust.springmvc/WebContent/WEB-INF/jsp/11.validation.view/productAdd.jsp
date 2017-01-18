@@ -4,6 +4,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -23,7 +25,16 @@
 			<fieldset>
 				<legend><spring:message code="product.add.newproduct"/>
 				
-				<span style="padding-left: 300px;"><a href="?language=en" >English</a>|<a href="?language=tr" >Turkce</a></span>
+					<span style="float:right">
+						<a href="?language=tr" >
+							<img src="${contextPath}/resources/images/TR.png" />						
+						</a>
+						|
+						<a href="?language=en">
+							<img src="${contextPath}/resources/images/EN.png" />
+						</a>					
+					</span>
+			
 				</legend>
     
 				<div class="form-group">
@@ -71,14 +82,7 @@
 					<label class="control-label col-lg-2" for="manufacturer">
 						<spring:message code="product.manufacturer"/>
 					</label>
-					<div class="col-lg-10">				
-						<!-- 								
-						<form:select id="manufacturer" path="category" type="text" class="form:input-large">
-							<form:option value="Apple">Apple</form:option>
-							<form:option value="Google">Google</form:option>
-							<form:option value="Samsung">Samsung</form:option>
-						</form:select>
-						 -->						 
+					<div class="col-lg-10">									 
 					    <form:select id="manufacturer" path="manufacturer" type="text" class="form:input-large" items="${manufacturerList}"/>						
 					</div>
 				</div>
@@ -88,14 +92,6 @@
 						<spring:message code="product.category"/>
 					</label>
 					<div class="col-lg-10">
-						<!-- 
-						<form:select id="category" path="category" type="text" class="form:input-large">
-							<form:option value="Laptop">Laptop</form:option>
-							<form:option value="Tablet">Tablet</form:option>
-							<form:option value="Smart Phone">Smart Phone</form:option>
-						</form:select>
-						 -->
-						 
 						 <form:select id="category" path="category" type="text" class="form:input-large" items="${categoryList}"/>
 					</div>
 				</div>
@@ -114,17 +110,7 @@
 					<label class="control-label col-lg-2" for="condition">
 						<spring:message code="product.condition"/>
 					</label>
-					<div class="col-lg-10">
-						<!-- 
-						<form:radiobutton path="condition" value="New" />New 
-						<form:radiobutton path="condition" value="Old" />Old 
-						<form:radiobutton path="condition" value="Refurbished" />Refurbished
-						 -->
-						 <!-- 
-						 <form:radiobuttons path="condition" items="${conditionMap}"/>
-						  -->
-						 						 
-						  
+					<div class="col-lg-10">							  
 						  <c:forEach var="varCondition" items="${conditionMap}">
     						<form:radiobutton path="condition" value="${varCondition.key}" /> 
     						<spring:message code="product.${varCondition.value}"/>

@@ -16,11 +16,8 @@
 	<mvc:annotation-driven	enable-matrix-variables="true"/>
 	
 	<mvc:resources mapping="/resources/**" location="resources/"/>
-	
-	
-	<!--Auto-scanning ozelligini aktif ettigimizde bean tanimlamasini xml dosyamizada 
-		yapmamiza gerek kalmaz. @Controller  @Service gibi annotation icin yeterli olacaktir. -->
-	<context:component-scan base-package="_09.validation" />
+
+	<context:component-scan base-package="_11.validation" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
