@@ -1,4 +1,4 @@
-package _11.audit.interceptor;
+package _13.audit.interceptor;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -13,13 +13,15 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 public class AuditingInterceptor extends HandlerInterceptorAdapter {
 
-	Logger logger = Logger.getLogger("auditLogger");
+	private Logger logger = Logger.getLogger("auditLogger");
 	private String user;
 	private String productId;
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse arg1, Object handler) throws Exception {
 
+		System.out.println("preHandle");
+		
 		if (request.getRequestURI().endsWith("products/add")) {
 
 			if (request.getMethod().equals("GET")) {
@@ -38,8 +40,10 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 	}
 
 	@Override
-	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception arg3)
-			throws Exception {
+	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
+			Exception arg3) throws Exception {
+		
+		System.out.println("afterCompletion");
 		// urun ekledikten sonra redirect islemi sonrasinda HTTP 302 POST
 		// request olusur.
 		if (request.getRequestURI().endsWith("products/add") && response.getStatus() == 302) {
@@ -51,6 +55,8 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 
+		System.out.println("postHandle");
+		
 		if (request.getRequestURI().endsWith("products/add")) {
 
 			if (request.getMethod().equals("GET")) {

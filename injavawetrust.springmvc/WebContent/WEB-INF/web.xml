@@ -14,40 +14,22 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
 
-	    <init-param>
+		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>			 	 		
-			/WEB-INF/12.validation.jsr349.xml	 	 
-			<!--
-			 /WEB-INF/01.appContext.xml		
-			 /WEB-INF/02.00.appContext.xml
-			 /WEB-INF/03.multiActionController.xml
-			 /WEB-INF/04.propertiesMethodNameResolver.xml	
-			 /WEB-INF/05.parameterMethodNameResolver.xml	
-			 /WEB-INF/06.requestMapping.xml
-			 /WEB-INF/07.uri.arguments.xml
-			 /WEB-INF/08.webstore.xml					 
-			 /WEB-INF/09.form.handling.xml
-			 /WEB-INF/10.external.textMessage.xml					
-			 /WEB-INF/11.validation.xml	
-		 	 /WEB-INF/12.validation.jsr349.xml
-		 	 /WEB-INF/11.audit.xml
-		 	 /WEB-INF/12.exception.handling.xml	
-			 /WEB-INF/13.xmlViewResolver.xml
-			 /WEB-INF/14.resourceBundleViewResolver.xml
-			 /WEB-INF/15.internalResourceViewResolver.xml
-			 /WEB-INF/16.urlBasedViewResolver.xml	
-			 /WEB-INF/17.xsltViewResolver.xml
-			 /WEB-INF/18.pdfAndExcel.xml
-			 /WEB-INF/19.json.xml
-			 /WEB-INF/20.jaxb.xml
-			 /WEB-INF/21.jaxb.xml
-			 /WEB-INF/22.apache.tiles.xml
-			 /WEB-INF/23.jpa.xml	
-			 /WEB-INF/24.hibernate.xml	
-			-->			 		   						  					
-			</param-value> 			
-		 </init-param>	
+			<param-value>
+				/WEB-INF/13.audit.xml
+				<!-- /WEB-INF/01.appContext.xml /WEB-INF/02.00.appContext.xml /WEB-INF/03.multiActionController.xml 
+					/WEB-INF/04.propertiesMethodNameResolver.xml /WEB-INF/05.parameterMethodNameResolver.xml 
+					/WEB-INF/06.requestMapping.xml /WEB-INF/07.uri.arguments.xml /WEB-INF/08.webstore.xml 
+					/WEB-INF/09.form.handling.xml /WEB-INF/10.external.textMessage.xml /WEB-INF/11.validation.xml 
+					/WEB-INF/12.validation.jsr349.xml /WEB-INF/13.audit.xml /WEB-INF/12.exception.handling.xml 
+					/WEB-INF/13.xmlViewResolver.xml /WEB-INF/14.resourceBundleViewResolver.xml 
+					/WEB-INF/15.internalResourceViewResolver.xml /WEB-INF/16.urlBasedViewResolver.xml 
+					/WEB-INF/17.xsltViewResolver.xml /WEB-INF/18.pdfAndExcel.xml /WEB-INF/19.json.xml 
+					/WEB-INF/20.jaxb.xml /WEB-INF/21.jaxb.xml /WEB-INF/22.apache.tiles.xml /WEB-INF/23.jpa.xml 
+					/WEB-INF/24.hibernate.xml -->
+			</param-value>
+		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
@@ -56,5 +38,16 @@
 		<url-pattern>/</url-pattern>
 		<url-pattern>/myproject/*</url-pattern>
 	</servlet-mapping>
+
+
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>webapp.root.one</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>log4jExposeWebAppRoot</param-name>
+		<param-value>false</param-value>
+	</context-param>
 
 </web-app>

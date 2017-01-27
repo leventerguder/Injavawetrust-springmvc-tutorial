@@ -17,10 +17,8 @@
 	
 	<mvc:resources mapping="/resources/**" location="resources/"/>
 	
-	
-	<!--Auto-scanning ozelligini aktif ettigimizde bean tanimlamasini xml dosyamizada 
-		yapmamiza gerek kalmaz. @Controller  @Service gibi annotation icin yeterli olacaktir. -->
-	<context:component-scan base-package="_11.audit" />
+
+	<context:component-scan base-package="_13.audit" />
 	
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -56,7 +54,7 @@
             <property name="paramName" value="language" />
         </bean>
         
-        <bean id="audit" class="_11.audit.interceptor.AuditingInterceptor"/>
+        <bean id="audit" class="_13.audit.interceptor.AuditingInterceptor"/>
     </mvc:interceptors>
   
 </beans>
