@@ -12,7 +12,7 @@
         ">
 
 	<mvc:annotation-driven />
-	<context:component-scan base-package="_12.exception.handling.controller" />
+	<context:component-scan base-package="_14.exception.handling.controller" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -25,10 +25,10 @@
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
 		<property name="exceptionMappings">
 			<props>
-				<prop key="java.lang.NumberFormatException">12.exception.handling.view/numberFormat</prop>
-				<prop key="java.lang.NullPointerException">12.exception.handling.view/npe</prop>
-				<prop key="_12.exception.handling.model.DatabaseException">
-					12.exception.handling.view/dbException
+				<prop key="java.lang.NumberFormatException">14.exception.handling.view/numberFormat</prop>
+				<prop key="java.lang.NullPointerException">14.exception.handling.view/npe</prop>
+				<prop key="_14.exception.handling.model.DatabaseException">
+					14.exception.handling.view/dbException
 				</prop>
 			</props>
 		</property>
