@@ -18,6 +18,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
 				/WEB-INF/14.exception.handling.xmlBased.xml 
+				/WEB-INF/15.exception.handling.annotationBased.xml 
 				<!-- 
 				/WEB-INF/01.appContext.xml 
 				/WEB-INF/02.00.appContext.xml 

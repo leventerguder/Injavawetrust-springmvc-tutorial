@@ -1,4 +1,4 @@
-package _15.exception.handling.annotation.controller;
+package _15.exception.handling.annotationBased.controller;
 
 import java.sql.SQLDataException;
 import java.sql.SQLException;
@@ -12,12 +12,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class ExceptionHandlingController {
 
 	@RequestMapping("/sqlException")
+	//http://localhost:8080/injavawetrust.springmvc/sqlException
 	String throwSQLException() throws SQLException {
 		System.out.println("SQLException....");
 		throw new SQLException();
 	}
 
 	@RequestMapping("/indexOutOfBoundsException")
+	//http://localhost:8080/injavawetrust.springmvc/indexOutOfBoundsException
 	String throwIndexOutOfBoundsException() {
 		System.out.println("IndexOutOfBoundsException....");
 		throw new IndexOutOfBoundsException();
@@ -25,7 +27,7 @@ public class ExceptionHandlingController {
 
 	@ExceptionHandler({SQLException.class, SQLDataException.class})
 	public String handleSQLException() {
-		return "12.exception.handling.view/sqlException";
+		return "15.exception.handling.annotationBased.view/sqlException";
 	}
 
 	@ExceptionHandler({IndexOutOfBoundsException.class})
@@ -33,7 +35,7 @@ public class ExceptionHandlingController {
 
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("exception", exception);
-		modelAndView.setViewName("12.exception.handling.view/indexOutOfBoundsException");
+		modelAndView.setViewName("15.exception.handling.annotationBased.view/indexOutOfBoundsException");
 		return modelAndView;
 	}
 }

@@ -1,4 +1,4 @@
-package _15.exception.handling.annotation.controller;
+package _15.exception.handling.annotationBased.controller;
 
 import java.sql.SQLDataException;
 import java.sql.SQLException;
@@ -15,7 +15,7 @@ public class GlobalExceptionHandlingController {
 	@ExceptionHandler({SQLException.class, SQLDataException.class})
 	public String handleGenericSQLException() {
 		System.out.println("handleGenericSQLException...");
-		return "12.exception.handling.view/genericSqlException";
+		return "15.exception.handling.annotationBased.view/genericSqlException";
 	}
 
 	@ExceptionHandler({IndexOutOfBoundsException.class})
@@ -23,7 +23,7 @@ public class GlobalExceptionHandlingController {
 		System.out.println("handleGenericIndexOutOfBoundsException...");
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("exception", exception);
-		modelAndView.setViewName("12.exception.handling.view/genericIndexOutOfBoundsException");
+		modelAndView.setViewName("15.exception.handling.annotationBased.view/genericIndexOutOfBoundsException");
 		return modelAndView;
 	}
 
@@ -32,10 +32,9 @@ public class GlobalExceptionHandlingController {
 	// SimpleMappingExceptionResolver icin NullPointerException hatasi sonucu donecek
 	// jsp dosyasini belirtmistik.
 	// Ayni testi tekrar yaptigimizda genericNpe.jsp calisacaktir.
-	// @ExceptionHandler({NullPointerException.class})
-	// public String handleNullPointerException() {
-	// System.out.println("handleNullPointerException...");
-	// return "12.exception.handling.view/genericNpe";
-	// }
+	//	 @ExceptionHandler({NullPointerException.class})
+	//	 public String handleNullPointerException() {
+	//		 return "15.exception.handling.annotationBased.view/genericNpe";
+	//	 }
 
 }
