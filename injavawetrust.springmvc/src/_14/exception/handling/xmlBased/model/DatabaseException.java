@@ -1,4 +1,4 @@
-package _14.exception.handling.model;
+package _14.exception.handling.xmlBased.model;
 
 public class DatabaseException extends RuntimeException {
 
