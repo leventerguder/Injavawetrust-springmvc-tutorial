@@ -57,7 +57,7 @@
 					<div class="col-lg-10">				
 						
 						<%--								
-						<form:select id="manufacturer" path="category" type="text" class="form:input-large">
+						<form:select id="manufacturer" path="manufacturer" type="text" class="form:input-large">
 							<form:option value="Apple">Apple</form:option>
 							<form:option value="Google">Google</form:option>
 							<form:option value="Samsung">Samsung</form:option>
