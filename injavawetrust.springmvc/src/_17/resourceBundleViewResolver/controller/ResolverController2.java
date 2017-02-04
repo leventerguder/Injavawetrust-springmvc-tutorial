@@ -1,4 +1,4 @@
-package _14.resourceBundleViewResolver.controller;
+package _17.resourceBundleViewResolver.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
