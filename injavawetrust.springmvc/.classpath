@@ -9,6 +9,7 @@
 	<classpathentry kind="src" path="messages"/>
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="src" path="persistence"/>
+	<classpathentry kind="src" path="17.resourceBundleViewResolver"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

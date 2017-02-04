@@ -6,6 +6,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/persistence"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/messages"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/17.resourceBundleViewResolver"/>
         <property name="context-root" value="injavawetrust.springmvc"/>
         <property name="java-output-path" value="/injavawetrust.springmvc/build/classes"/>
     </wb-module>
