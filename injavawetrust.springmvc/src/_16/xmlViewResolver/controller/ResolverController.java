@@ -1,4 +1,4 @@
-package _13.xmlViewResolver.controller;
+package _16.xmlViewResolver.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

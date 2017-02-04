@@ -7,11 +7,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
    <bean id="myBeanViewNamePage1" class="org.springframework.web.servlet.view.JstlView">
-        <property name="url" value="WEB-INF/jsp/13.xmlViewResolver.view/myPage1.jsp" />
+        <property name="url" value="WEB-INF/jsp/16.xmlViewResolver.view/myPage1.jsp" />
     </bean>
     
    <bean id="myBeanViewNamePage2" class="org.springframework.web.servlet.view.JstlView">
-        <property name="url" value="WEB-INF/jsp/13.xmlViewResolver.view/myPage2.jsp" />
+        <property name="url" value="WEB-INF/jsp/16.xmlViewResolver.view/myPage2.jsp" />
     </bean>
 
 </beans>

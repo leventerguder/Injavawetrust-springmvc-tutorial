@@ -17,8 +17,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
-				/WEB-INF/14.exception.handling.xmlBased.xml 
-				/WEB-INF/15.exception.handling.annotationBased.xml 
+ 				/WEB-INF/16.xmlViewResolver.xml 
 				<!-- 
 				/WEB-INF/01.appContext.xml 
 				/WEB-INF/02.00.appContext.xml 
@@ -33,12 +32,20 @@
 				/WEB-INF/11.validation.xml 
 				/WEB-INF/12.validation.jsr349.xml 
 				/WEB-INF/13.audit.xml 
-				/WEB-INF/14.exception.handling.xml 
-					/WEB-INF/13.xmlViewResolver.xml /WEB-INF/14.resourceBundleViewResolver.xml 
-					/WEB-INF/15.internalResourceViewResolver.xml /WEB-INF/16.urlBasedViewResolver.xml 
-					/WEB-INF/17.xsltViewResolver.xml /WEB-INF/18.pdfAndExcel.xml /WEB-INF/19.json.xml 
-					/WEB-INF/20.jaxb.xml /WEB-INF/21.jaxb.xml /WEB-INF/22.apache.tiles.xml /WEB-INF/23.jpa.xml 
-					/WEB-INF/24.hibernate.xml -->
+				/WEB-INF/14.exception.handling.xmlBased.xml 
+				/WEB-INF/15.exception.handling.annotationBased.xml 
+				/WEB-INF/16.xmlViewResolver.xml 
+				/WEB-INF/14.resourceBundleViewResolver.xml 
+				/WEB-INF/15.internalResourceViewResolver.xml 
+				/WEB-INF/16.urlBasedViewResolver.xml 
+				/WEB-INF/17.xsltViewResolver.xml 
+				/WEB-INF/18.pdfAndExcel.xml
+				/WEB-INF/19.json.xml 
+				/WEB-INF/20.jaxb.xml 
+				/WEB-INF/21.jaxb.xml 
+				/WEB-INF/22.apache.tiles.xml 
+				/WEB-INF/23.jpa.xml 
+				/WEB-INF/24.hibernate.xml -->
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
