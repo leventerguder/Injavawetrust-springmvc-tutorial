@@ -1,4 +1,4 @@
-package _16.urlBasedViewResolver.controller;
+package _19.urlBasedViewResolver.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ public class ResolverController4 {
 	public ModelAndView handleViewResolverForPage5() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("message", "page7");
-		modelAndView.setViewName("16.urlBasedViewResolver.view/myPage7");
+		modelAndView.setViewName("19.urlBasedViewResolver.view/myPage7");
 		return modelAndView;
 	}
 
@@ -19,7 +19,7 @@ public class ResolverController4 {
 	public ModelAndView handleViewResolverForPage6() {
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("message", "page8");
-		modelAndView.setViewName("16.urlBasedViewResolver.view/myPage8");
+		modelAndView.setViewName("19.urlBasedViewResolver.view/myPage8");
 		return modelAndView;
 	}
 }
