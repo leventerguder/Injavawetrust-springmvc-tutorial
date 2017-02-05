@@ -17,7 +17,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value> 				
- 				/WEB-INF/17.resourceBundleViewResolver.xml  
+ 				/WEB-INF/18.internalResourceViewResolver.xml
 				<!-- 
 				/WEB-INF/01.appContext.xml 
 				/WEB-INF/02.00.appContext.xml 
@@ -34,9 +34,9 @@
 				/WEB-INF/13.audit.xml 
 				/WEB-INF/14.exception.handling.xmlBased.xml 
 				/WEB-INF/15.exception.handling.annotationBased.xml 
-				/WEB-INF/16.xmlViewResolver.xml 
-				/WEB-INF/17.resourceBundleViewResolver.xml 
-				/WEB-INF/15.internalResourceViewResolver.xml 
+				/WEB-INF/16.xmlViewResolver.xml
+				/WEB-INF/17.resourceBundleViewResolver.xml
+				/WEB-INF/18.internalResourceViewResolver.xml 
 				/WEB-INF/16.xmlViewResolver.xml
 				/WEB-INF/17.xsltViewResolver.xml 
 				/WEB-INF/18.pdfAndExcel.xml
