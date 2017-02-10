@@ -175,6 +175,7 @@
 
 		<!-- EclipseLink dependency -->
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+		<!-- disable when using hibernate -->
 		<!-- 
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
@@ -198,7 +199,7 @@
 		</dependency>
 
 		<!-- hibernate dependency -->
-		
+		<!-- disable when using JPA -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>

@@ -15,10 +15,6 @@ public class PersonDAOImpl implements PersonDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
-	}
-
 	private Session getCurrentSession() {
 		return sessionFactory.getCurrentSession();
 	}
