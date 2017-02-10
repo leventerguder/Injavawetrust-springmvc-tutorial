@@ -1,4 +1,4 @@
-package _21.jaxb.controller;
+package _24.jaxb.oxm.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,13 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import _21.jaxb.model.Employee;
-import _21.jaxb.model.EmployeeList;
+import _24.jaxb.oxm.model.Employee;
+import _24.jaxb.oxm.model.EmployeeList;
 
 @Controller
 public class JAXBEmployeeController {
 
 	@RequestMapping("/getEmployeeXML")
+	// http://localhost:8080/injavawetrust.springmvc/getEmployeeXML
 	public ModelAndView getEmployeeXML() {
 		ModelAndView mv = new ModelAndView("marshallingView");
 		mv.addObject(new Employee("1", "Levent", "Erguder", "1989"));
@@ -21,6 +22,7 @@ public class JAXBEmployeeController {
 	}
 
 	@RequestMapping("/getEmployeeListXML")
+	// http://localhost:8080/injavawetrust.springmvc/getEmployeeListXML
 	public ModelAndView getEmployeeListXML() {
 		// prepare data
 		Employee employee1 = new Employee("1", "Levent", "Erguder", "1989");

@@ -1,4 +1,4 @@
-package _21.jaxb.model;
+package _24.jaxb.oxm.model;
 
 import java.util.List;
 

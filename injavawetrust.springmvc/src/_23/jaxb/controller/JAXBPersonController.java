@@ -1,4 +1,4 @@
-package _20.jaxb.controller;
+package _23.jaxb.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,20 +7,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import _20.jaxb.model.Person;
-import _20.jaxb.model.PersonList;
+import _23.jaxb.model.Person;
+import _23.jaxb.model.PersonList;
 
 @Controller
 public class JAXBPersonController {
 
 	@RequestMapping("/getPersonXML")
 	@ResponseBody
+	// http://localhost:8080/injavawetrust.springmvc/getPersonXML
 	public Person getPersonXML() {
 		return new Person("1", "Levent", "Erguder", "1989");
 	}
 
 	@RequestMapping("/getPersonListXML")
 	@ResponseBody
+	// http://localhost:8080/injavawetrust.springmvc/getPersonListXML
 	public PersonList getPersonListXML() {
 		// prepare data
 		Person person1 = new Person("1", "Levent", "Erguder", "1989");

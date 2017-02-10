@@ -136,6 +136,7 @@
 		    <version>${jackson.version}</version>
 		</dependency>
 
+		<!--OXM XML  -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-oxm</artifactId>
