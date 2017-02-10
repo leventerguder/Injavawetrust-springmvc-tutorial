@@ -48,6 +48,7 @@
 		<poi.version>3.15</poi.version>
 		<jxl.version>2.6.12</jxl.version>
 		<jackson.version>2.8.6</jackson.version>
+		<tiles.version>3.0.7</tiles.version>
 	</properties>
 
 
@@ -145,17 +146,21 @@
 
 		<!-- Apache Tiles dependency -->
 
+		<!-- https://mvnrepository.com/artifact/org.apache.tiles/tiles-core -->
 		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-core</artifactId>
-			<version>3.0.5</version>
+		    <groupId>org.apache.tiles</groupId>
+		    <artifactId>tiles-core</artifactId>
+		    <version>${tiles.version}</version>
 		</dependency>
 
+
+		<!-- https://mvnrepository.com/artifact/org.apache.tiles/tiles-jsp -->
 		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-jsp</artifactId>
-			<version>3.0.5</version>
+		    <groupId>org.apache.tiles</groupId>
+		    <artifactId>tiles-jsp</artifactId>
+		    <version>${tiles.version}</version>
 		</dependency>
+
 
 		<!-- JPA dependency -->
 
