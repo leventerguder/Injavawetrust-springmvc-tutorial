@@ -175,12 +175,13 @@
 
 		<!-- EclipseLink dependency -->
 		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+		<!-- 
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>eclipselink</artifactId>
 			<version>${eclipselink.version}</version>
 		</dependency>
-
+		 -->
 		<!-- Oracle dependency -->
 		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
 		<dependency>
@@ -197,13 +198,13 @@
 		</dependency>
 
 		<!-- hibernate dependency -->
-		<!-- 
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
- 		 -->
+ 	
 
 	</dependencies>
 </project>

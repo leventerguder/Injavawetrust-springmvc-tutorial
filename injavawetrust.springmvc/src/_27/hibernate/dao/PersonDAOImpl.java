@@ -1,4 +1,4 @@
-package _24.hibernate.dao;
+package _27.hibernate.dao;
 
 import java.util.List;
 import javax.persistence.TypedQuery;
@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import _24.hibernate.domain.Person;
+import _27.hibernate.domain.Person;
 
 @Repository
 public class PersonDAOImpl implements PersonDAO {

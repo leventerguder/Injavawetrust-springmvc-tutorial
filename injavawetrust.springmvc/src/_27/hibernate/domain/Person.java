@@ -1,4 +1,4 @@
-package _24.hibernate.domain;
+package _27.hibernate.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -61,8 +61,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", surname=" + surname + ", salary="
-				+ salary + "]";
+		return "Person [id=" + id + ", name=" + name + ", surname=" + surname + ", salary=" + salary + "]";
 	}
 
 }

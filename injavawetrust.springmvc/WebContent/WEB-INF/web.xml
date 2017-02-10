@@ -18,7 +18,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value> 				
  				
- 				/WEB-INF/26.jpa.xml  
+ 				/WEB-INF/27.hibernate.xml 
 				<!-- 
 				/WEB-INF/01.appContext.xml 
 				/WEB-INF/02.00.appContext.xml 
@@ -46,7 +46,8 @@
 				/WEB-INF/24.jaxb.oxm.xml  
 				/WEB-INF/25.apache.tiles.xml 
 				/WEB-INF/26.jpa.xml 
-				/WEB-INF/27.hibernate.xml -->
+				/WEB-INF/27.hibernate.xml 
+				-->
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>

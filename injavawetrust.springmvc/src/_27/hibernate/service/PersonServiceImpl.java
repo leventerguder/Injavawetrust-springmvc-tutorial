@@ -1,4 +1,4 @@
-package _24.hibernate.service;
+package _27.hibernate.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import _24.hibernate.dao.PersonDAOImpl;
-import _24.hibernate.domain.Person;
+import _27.hibernate.dao.PersonDAOImpl;
+import _27.hibernate.domain.Person;
 
 @Service
 public class PersonServiceImpl implements PersonService {
