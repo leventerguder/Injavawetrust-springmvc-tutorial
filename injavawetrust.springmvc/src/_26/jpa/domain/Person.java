@@ -1,4 +1,4 @@
-package _23.jpa.domain;
+package _26.jpa.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

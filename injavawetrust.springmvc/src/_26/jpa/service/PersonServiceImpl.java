@@ -1,12 +1,12 @@
-package _23.jpa.service;
+package _26.jpa.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import _23.jpa.dao.PersonDAOImpl;
-import _23.jpa.domain.Person;
+import _26.jpa.dao.PersonDAOImpl;
+import _26.jpa.domain.Person;
 
 @Service
 public class PersonServiceImpl implements PersonService {

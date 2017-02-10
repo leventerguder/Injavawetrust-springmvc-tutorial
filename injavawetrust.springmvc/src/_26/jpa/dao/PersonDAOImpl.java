@@ -1,4 +1,4 @@
-package _23.jpa.dao;
+package _26.jpa.dao;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import _23.jpa.domain.Person;
+import _26.jpa.domain.Person;
 
 @Repository
 public class PersonDAOImpl implements PersonDAO {
@@ -39,11 +39,10 @@ public class PersonDAOImpl implements PersonDAO {
 		return query.getResultList();
 	}
 
-
 	@Override
 	public void updatePerson(Person person) {
 		Person foundEmployee = getPersonById(person.getId());
-		if(foundEmployee!=null){
+		if (foundEmployee != null) {
 			entityManager.getTransaction().begin();
 			foundEmployee.setName(person.getName());
 			foundEmployee.setSurname(person.getSurname());

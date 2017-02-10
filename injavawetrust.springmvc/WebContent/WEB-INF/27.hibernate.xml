@@ -17,7 +17,7 @@
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />
 
-	<context:component-scan base-package="_24" />
+	<context:component-scan base-package="_27" />
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -46,7 +46,7 @@
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 
 		<property name="dataSource" ref="dataSourceId" />
-		<property name="packagesToScan" value="_24.hibernate.domain" />
+		<property name="packagesToScan" value="_27.hibernate.domain" />
 
 		<property name="hibernateProperties">
 			<props>

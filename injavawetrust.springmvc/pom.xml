@@ -40,15 +40,17 @@
 		<jstl.version>1.2</jstl.version>
 		<validation.api.version>1.1.0.Final</validation.api.version>
 		<hibernate.validator.version>5.3.4.Final</hibernate.validator.version>
-		<jpa.version>2.1.0</jpa.version>
-		<eclipselink.version>2.6.1</eclipselink.version>
-		<hibernate.version>5.2.0.Final</hibernate.version>
 		<log4j.version>1.2.17</log4j.version>
 		<itext.version>2.1.7</itext.version>
 		<poi.version>3.15</poi.version>
 		<jxl.version>2.6.12</jxl.version>
 		<jackson.version>2.8.6</jackson.version>
 		<tiles.version>3.0.7</tiles.version>
+		<jpa.version>2.1.1</jpa.version>
+		<eclipselink.version>2.6.1</eclipselink.version>
+		<hibernate.version>5.2.6.Final</hibernate.version>
+		<oracle.version>11.2.0.3</oracle.version>
+		<mysql.version>6.0.5</mysql.version>
 	</properties>
 
 
@@ -163,37 +165,45 @@
 
 
 		<!-- JPA dependency -->
-
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/javax.persistence -->
+		
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>javax.persistence</artifactId>
 			<version>${jpa.version}</version>
 		</dependency>
 
-		<!-- eclipselink dependency -->
-
+		<!-- EclipseLink dependency -->
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>eclipselink</artifactId>
 			<version>${eclipselink.version}</version>
 		</dependency>
 
-		<!-- oracle dependency -->
-
+		<!-- Oracle dependency -->
+		<!-- https://mvnrepository.com/artifact/oracle/ojdbc6 -->
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.3</version>
+			<version>${oracle.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>${mysql.version}</version>
 		</dependency>
 
 		<!-- hibernate dependency -->
-
+		<!-- 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-
+ 		 -->
 
 	</dependencies>
 </project>

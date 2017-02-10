@@ -14,7 +14,7 @@
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 	<mvc:annotation-driven />
 		
-	<context:component-scan base-package="_23" />
+	<context:component-scan base-package="_26" />
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/" />
@@ -24,7 +24,7 @@
 	
 	<bean id="entityManagerFactoryId"
 		class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="SpringJPA_PU"></property>
+		<property name="persistenceUnitName" value="SpringJPA_MySQL_PU"></property>
 	</bean>
 		
 
