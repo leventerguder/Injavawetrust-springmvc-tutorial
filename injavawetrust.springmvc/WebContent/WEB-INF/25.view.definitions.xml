@@ -5,35 +5,35 @@
 <tiles-definitions>
 
 	<definition name="menu1View" extends="menu1Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myMenu1.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myMenu1.jsp" />
 	</definition>
 
 	<definition name="menu2View" extends="menu2Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myMenu2.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myMenu2.jsp" />
 	</definition>
 
 	<definition name="page1View" extends="menu1Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myPage1.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myPage1.jsp" />
 	</definition>
 
 	<definition name="page2View" extends="menu1Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myPage2.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myPage2.jsp" />
 	</definition>
 
 	<definition name="page3View" extends="menu1Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myPage3.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myPage3.jsp" />
 	</definition>
 
 	<definition name="page4View" extends="menu2Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myPage4.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myPage4.jsp" />
 	</definition>
 
 	<definition name="page5View" extends="menu2Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myPage5.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myPage5.jsp" />
 	</definition>
 
 	<definition name="page6View" extends="menu2Template">
-		<put-attribute name="body" value="/WEB-INF/jsp/22.apache.tiles.view/myPage6.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/25.apache.tiles.view/myPage6.jsp" />
 	</definition>
 
 </tiles-definitions>

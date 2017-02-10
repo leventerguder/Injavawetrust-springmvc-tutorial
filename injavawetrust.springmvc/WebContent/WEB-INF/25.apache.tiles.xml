@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         ">
 
-	<context:component-scan base-package="_22.apache.tiles.controller" />
+	<context:component-scan base-package="_25.apache.tiles.controller" />
 
 	<mvc:annotation-driven />
 
@@ -23,8 +23,8 @@
 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
 		<property name="definitions">
 			<list>
-				<value>/WEB-INF/22.layout.definitions.xml</value>
-				<value>/WEB-INF/22.view.definitions.xml</value>
+				<value>/WEB-INF/25.layout.definitions.xml</value>
+				<value>/WEB-INF/25.view.definitions.xml</value>
 			</list>
 		</property>
 	</bean>

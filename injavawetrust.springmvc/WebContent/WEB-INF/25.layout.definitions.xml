@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="menu1Template" template="/WEB-INF/jsp/25.apache.tiles.view/template/tilesTemplate.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/25.apache.tiles.view/template/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/25.apache.tiles.view/template/leftMenu1.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/25.apache.tiles.view/template/footer.jsp" />
+	</definition>
+
+
+	<definition name="menu2Template" template="/WEB-INF/jsp/25.apache.tiles.view/template/tilesTemplate.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/25.apache.tiles.view/template/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/25.apache.tiles.view/template/leftMenu2.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/25.apache.tiles.view/template/footer.jsp" />
+	</definition>
+
+</tiles-definitions>
