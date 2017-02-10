@@ -1,16 +1,15 @@
-package _18.pdfAndExcel.view.pdf;
+package _21.pdfAndExcel.service.pdf;
 
 import java.util.List;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.view.document.AbstractPdfView;
-import _18.pdfAndExcel.model.Person;
-
 import com.lowagie.text.Document;
 import com.lowagie.text.Table;
 import com.lowagie.text.pdf.PdfWriter;
+
+import _21.pdfAndExcel.model.Person;
 
 public class PdfView extends AbstractPdfView {
 
@@ -20,7 +19,7 @@ public class PdfView extends AbstractPdfView {
 			HttpServletRequest request, HttpServletResponse response) throws Exception {
 
 		List<Person> personList = (List<Person>) model.get("persons");
-		
+
 		Table table = new Table(4);
 		table.addCell("Id");
 		table.addCell("Name");

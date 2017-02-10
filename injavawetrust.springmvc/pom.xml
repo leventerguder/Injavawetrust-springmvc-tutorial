@@ -44,6 +44,9 @@
 		<eclipselink.version>2.6.1</eclipselink.version>
 		<hibernate.version>5.2.0.Final</hibernate.version>
 		<log4j.version>1.2.17</log4j.version>
+		<itext.version>2.1.7</itext.version>
+		<poi.version>3.15</poi.version>
+		<jxl.version>2.6.12</jxl.version>
 	</properties>
 
 
@@ -98,29 +101,31 @@
 		<dependency>
 			<groupId>com.lowagie</groupId>
 			<artifactId>itext</artifactId>
-			<version>2.1.7</version>
+			<version>${itext.version}</version>
 		</dependency>
 
 		<!-- apache poi -->
 
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.14</version>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>${poi.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.14</version>
+			<version>${poi.version}</version>
 		</dependency>
 
 		<!-- jexcel api -->
 
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
 		<dependency>
-			<groupId>net.sourceforge.jexcelapi</groupId>
-			<artifactId>jxl</artifactId>
-			<version>2.6.3</version>
+		    <groupId>net.sourceforge.jexcelapi</groupId>
+		    <artifactId>jxl</artifactId>
+		    <version>${jxl.version}</version>
 		</dependency>
 
 		<!-- JACKSON Mapper -->

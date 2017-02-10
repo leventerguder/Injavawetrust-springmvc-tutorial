@@ -1,19 +1,14 @@
-package _18.pdfAndExcel.view.excel;
+package _21.pdfAndExcel.service.excel;
 
 import java.util.List;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import jxl.write.Label;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
-
 import org.springframework.web.servlet.view.document.AbstractJExcelView;
-
-import _18.pdfAndExcel.model.Person;
-
+import _21.pdfAndExcel.model.Person;
 
 @SuppressWarnings("deprecation")
 public class JExcelView extends AbstractJExcelView {
@@ -22,9 +17,9 @@ public class JExcelView extends AbstractJExcelView {
 	@Override
 	protected void buildExcelDocument(Map<String, Object> model, WritableWorkbook workbook, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		
+
 		List<Person> personList = (List<Person>) model.get("persons");
-		
+
 		WritableSheet sheet = workbook.createSheet("Revenue Report", 0);
 		sheet.addCell(new Label(0, 0, "Id"));
 		sheet.addCell(new Label(1, 0, "Name"));

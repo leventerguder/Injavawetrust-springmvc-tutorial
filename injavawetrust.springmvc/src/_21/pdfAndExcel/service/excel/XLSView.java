@@ -1,19 +1,16 @@
-package _18.pdfAndExcel.view.excel;
+package _21.pdfAndExcel.service.excel;
 
 import java.util.List;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.web.servlet.view.document.AbstractXlsxView;
+import org.springframework.web.servlet.view.document.AbstractXlsView;
+import _21.pdfAndExcel.model.Person;
 
-import _18.pdfAndExcel.model.Person;
-
-public class XLSXView extends AbstractXlsxView {
+public class XLSView extends AbstractXlsView {
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -23,6 +20,7 @@ public class XLSXView extends AbstractXlsxView {
 		List<Person> personList = (List<Person>) model.get("persons");
 
 		Sheet sheet = workbook.createSheet();
+
 		Row header = sheet.createRow(0);
 		header.createCell(0).setCellValue("Id");
 		header.createCell(1).setCellValue("Name");

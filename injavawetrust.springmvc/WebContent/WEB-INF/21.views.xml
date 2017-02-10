@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- PDF view -->
+	
+	 <bean id="pdfView" class="_21.pdfAndExcel.service.pdf.PdfView"/>
+	  
+	  <!-- Excel views -->
+	  
+	 <bean id="excelView" class="_21.pdfAndExcel.service.excel.ExcelView"/>
+	 
+	 <bean id="jExcelView" class="_21.pdfAndExcel.service.excel.JExcelView"/>
+	 
+	 <bean id="xlsView" class="_21.pdfAndExcel.service.excel.XLSView"/>
+	 
+	 <bean id="xlsxView" class="_21.pdfAndExcel.service.excel.XLSXView"/>
+     
+	  <bean id="personListView" class="org.springframework.web.servlet.view.JstlView">
+	        <property name="url" value="WEB-INF/jsp/21.pdfAndExcel.view/myPersons.jsp" />
+	  </bean>
+    
+</beans>
