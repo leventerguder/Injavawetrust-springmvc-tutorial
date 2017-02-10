@@ -1,14 +1,21 @@
 package _24.jaxb.oxm.model;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "employee")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Employee {
 
+	@XmlElement
 	private String id;
+	@XmlElement
 	private String name;
+	@XmlElement
 	private String surname;
+	@XmlElement
 	private String birthYear;
 
 	public Employee() {
@@ -25,7 +32,6 @@ public class Employee {
 		this.birthYear = birthYear;
 	}
 
-	@XmlElement
 	public String getId() {
 		return id;
 	}
@@ -34,7 +40,6 @@ public class Employee {
 		this.id = id;
 	}
 
-	@XmlElement
 	public String getName() {
 		return name;
 	}
@@ -42,8 +47,7 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	@XmlElement
+
 	public String getSurname() {
 		return surname;
 	}
@@ -51,8 +55,7 @@ public class Employee {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	
-	@XmlElement
+
 	public String getBirthYear() {
 		return birthYear;
 	}
