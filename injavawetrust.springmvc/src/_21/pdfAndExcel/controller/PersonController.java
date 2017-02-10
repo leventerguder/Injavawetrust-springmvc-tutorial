@@ -35,7 +35,7 @@ public class PersonController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/excelExport", method = {RequestMethod.POST})
+	@RequestMapping(value = "/excelExport", method = { RequestMethod.POST })
 	public ModelAndView excelExport(HttpServletResponse response) {
 
 		response.setContentType("application/vnd.ms-excel");
@@ -47,7 +47,7 @@ public class PersonController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/jExcelExport", method = {RequestMethod.POST})
+	@RequestMapping(value = "/jExcelExport", method = { RequestMethod.POST })
 	public ModelAndView jExcelExport(HttpServletResponse response) {
 
 		response.setContentType("application/vnd.ms-excel");
@@ -59,7 +59,7 @@ public class PersonController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/xlsExport", method = {RequestMethod.POST})
+	@RequestMapping(value = "/xlsExport", method = { RequestMethod.POST })
 	public ModelAndView xlsViewExport(HttpServletResponse response) {
 
 		response.setContentType("application/vnd.ms-excel");
@@ -71,7 +71,7 @@ public class PersonController {
 		return mv;
 	}
 
-	@RequestMapping(value = "/xlsxExport", method = {RequestMethod.POST})
+	@RequestMapping(value = "/xlsxExport", method = { RequestMethod.POST })
 	public ModelAndView xlsxViewExport(HttpServletResponse response) {
 
 		response.setContentType("application/vnd.ms-excel");
