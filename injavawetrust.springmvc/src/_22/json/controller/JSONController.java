@@ -1,4 +1,4 @@
-package _19.json.controller;
+package _22.json.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,13 +6,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import _19.json.model.Person;
+import _22.json.model.Person;
 
 @Controller
 public class JSONController {
 
 	@RequestMapping("/getPerson")
-	@ResponseBody 
+	@ResponseBody
 	public Person getStudent() {
 		return new Person("1", "Levent", "Erguder", "1989");
 	}

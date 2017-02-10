@@ -17,7 +17,7 @@
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value> 				
- 				/WEB-INF/21.pdfAndExcel.xml 
+ 				/WEB-INF/22.json.xml
 				<!-- 
 				/WEB-INF/01.appContext.xml 
 				/WEB-INF/02.00.appContext.xml 
@@ -40,7 +40,7 @@
 				/WEB-INF/19.urlBasedViewResolver.xml
 				/WEB-INF/20.xsltViewResolver.xml 
 				/WEB-INF/21.pdfAndExcel.xml
-				/WEB-INF/19.json.xml 
+				/WEB-INF/22.json.xml 
 				/WEB-INF/20.jaxb.xml 
 				/WEB-INF/21.jaxb.xml 
 				/WEB-INF/22.apache.tiles.xml 

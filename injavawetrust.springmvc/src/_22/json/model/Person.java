@@ -1,4 +1,4 @@
-package _19.json.model;
+package _22.json.model;
 
 public class Person {
 
