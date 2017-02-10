@@ -13,12 +13,14 @@ public class JSONController {
 
 	@RequestMapping("/getPerson")
 	@ResponseBody
-	public Person getStudent() {
+	// http://localhost:8080/injavawetrust.springmvc/getPerson
+	public Person getPerson() {
 		return new Person("1", "Levent", "Erguder", "1989");
 	}
 
 	@RequestMapping("/getPersonList")
 	@ResponseBody
+	// http://localhost:8080/injavawetrust.springmvc/getPersonList
 	public List<Person> getPersonList() {
 		// prepare data
 		Person person1 = new Person("1", "Levent", "Erguder", "1989");
