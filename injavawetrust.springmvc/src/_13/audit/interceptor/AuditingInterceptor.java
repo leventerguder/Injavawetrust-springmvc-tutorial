@@ -21,8 +21,8 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse arg1, Object handler) throws Exception {
 
 		System.out.println("preHandle");
-		
-		if (request.getRequestURI().endsWith("products/add")) {
+
+		if (request.getRequestURI().endsWith("add")) {
 
 			if (request.getMethod().equals("GET")) {
 				//
@@ -42,11 +42,11 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler,
 			Exception arg3) throws Exception {
-		
+
 		System.out.println("afterCompletion");
 		// urun ekledikten sonra redirect islemi sonrasinda HTTP 302 POST
 		// request olusur.
-		if (request.getRequestURI().endsWith("products/add") && response.getStatus() == 302) {
+		if (request.getRequestURI().endsWith("add") && response.getStatus() == 302) {
 			logger.info(String.format("A New product[%s] Added by %s on %s", productId, user, getCurrentTime()));
 		}
 	}
@@ -56,8 +56,8 @@ public class AuditingInterceptor extends HandlerInterceptorAdapter {
 			ModelAndView modelAndView) throws Exception {
 
 		System.out.println("postHandle");
-		
-		if (request.getRequestURI().endsWith("products/add")) {
+
+		if (request.getRequestURI().endsWith("add")) {
 
 			if (request.getMethod().equals("GET")) {
 				//
